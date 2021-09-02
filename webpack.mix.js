@@ -40,6 +40,7 @@ mix.sass("src/sass/app.scss", "dist/css");
 
 mix.copyDirectory("src/vendor/font-awesome/fonts", "dist/fonts");
 mix.copyDirectory("src/fonts/", "dist/fonts");
+mix.copyDirectory("src/swiper/", "dist/swiper");
 
 // mix.sourceMaps();
 mix.setPublicPath("dist");
@@ -59,32 +60,43 @@ mix.webpackConfig({
             inject: false
         }),
         new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/about-us.ejs",
-            filename: "about-us.html",
+            template: "ejs-compiled-loader!./src/solutions.ejs",
+            filename: "solutions.html",
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            template: "ejs-compiled-loader!./src/insights.ejs",
+            filename: "insights.html",
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            template: "ejs-compiled-loader!./src/about.ejs",
+            filename: "about.html",
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            template: "ejs-compiled-loader!./src/why-digipli.ejs",
+            filename: "why-digipli.html",
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            template: "ejs-compiled-loader!./src/Insights-detail.ejs",
+            filename: "Insights-detail.html",
             inject: false
         }),
         new HtmlWebpackPlugin({
             template: "ejs-compiled-loader!./src/contact-us.ejs",
             filename: "contact-us.html",
             inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/datatable-demo.ejs",
-            filename: "datatable-demo.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "ejs-compiled-loader!./src/font-awesome.ejs",
-            filename: "font-awesome.html",
-            inject: false
         })
+
     ],
     devServer: {
         //hot: true, inline: true, contentBase: __dirname
         disableHostCheck: false,
         watchContentBase: true,
-        host: "0.0.0.0",
-        open: true
-        //port: 8082,
+        host: "127.0.0.1",
+        open: true,
+        port: 8082,
     }
 });

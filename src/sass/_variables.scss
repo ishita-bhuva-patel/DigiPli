@@ -7,3 +7,16 @@ $enable-rounded: false;
 // $input-focus-bg: #dcad1a;
 
 // $input-transition: border-color ease-in-out 1s, box-shadow ease-in-out 1s;
+$primary:#1800B9;
+$light-gray:#969696;
+$white: white;
+$full-gray:#505050;
+
+$border-color: rgba(24,0,185,0.10);
+
+
+@mixin media-breakpoint-up-xl {
+    @media (min-width: 1500px) {
+        @content;
+    }
+}

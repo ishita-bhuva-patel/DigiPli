@@ -1,67 +1,65 @@
-<footer class="pt-4 my-md-5 pt-md-5 border-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md">
-                <img class="mb-2" src="images/logistic-logo.svg" alt="" width="150">
-                <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Features</h5>
-                <ul class="list-unstyled text-small">
-                    <li>
-                        <a class="text-muted" href="#">Cool stuff</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Random feature</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Team feature</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Stuff for developers</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Another one</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Last time</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li>
-                        <a class="text-muted" href="#">Resource</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Resource name</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Another resource</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Final resource</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                    <li>
-                        <a class="text-muted" href="#">Team</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Locations</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Privacy</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Terms</a>
-                    </li>
-                </ul>
+<footer class="dg-footer" id="dg-footer-section">
+    <div class="container dg-space <%= (htmlWebpackPlugin.options.filename === 'Insights-detail.html' || htmlWebpackPlugin.options.filename === 'contact-us.html') ? 'd-none' : '' %>" id="section2">
+        <div class="dg-form-title-block" data-aos="fade-up" data-aos-duration="1500">
+            <p class="dg-small-label">Contact Us</p>
+            <h4 class="dg-subtitle">To contact us please use the form below</h4>
+        </div>
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1500">
+            <div class="col-md-10 col-xl-9">
+               <form action="" class="dg-form row">
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control"  placeholder="Name">                            
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="email" class="form-control"  placeholder="Email">                            
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control"  placeholder="Business">                            
+                    </div>
+                    <div class="form-group col-md-12">
+                        <textarea class="form-control" placeholder="Message"rows="3"></textarea>      
+                    </div>
+                    <div class="form-group col-md-12 text-center mb-0">
+                        <button type="button" class="btn">Send</button>
+                    </div>
+               </form>
             </div>
         </div>
     </div>
+    <div class="dg-footer-bottom"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>© Copyright 2019 DigiPli</p>
+                </div>
+                <div class="col-md-8">
+                    <ul class="dg-menu d-flex align-items-center justify-content-end">
+                        <li class="<%= htmlWebpackPlugin.options.filename === 'index.html' ? 'active' : '' %>" >
+                        <a href="index.html" id="DigiPli">Why DigiPli
+                            <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="<%= htmlWebpackPlugin.options.filename === 'solutions.html' ? 'active' : '' %>" >
+                            <a href="solutions.html" id="Solutions">Solutions</a>
+                        </li>
+                        <li class="<%= htmlWebpackPlugin.options.filename === 'insights.html' ? 'active' : '' %>" >
+                            <a  href="insights.html" id="Insights">Insights</a>
+                        </li>
+                        <li class="<%= htmlWebpackPlugin.options.filename === 'about.html' ? 'active' : '' %>" >
+                            <a href="about.html" id="About" >About</a>
+                        </li>
+                        <li class="mr-0 <%= htmlWebpackPlugin.options.filename === 'contact-us.html' ? 'active' : '' %>">
+                            <a href="contact-us.html">Contact us</a>
+                        </li>
+                        <li class="m-0">
+                            <a href="contact-us.html"><i></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dg-footer-fix-img-bottom"></div>
+    <div class="dg-footer-fix-img-left <%= (htmlWebpackPlugin.options.filename === 'Insights-detail.html' || htmlWebpackPlugin.options.filename === 'contact-us.html') ? 'd-none' : '' %>" ></div>
 </footer>
+

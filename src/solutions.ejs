@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/favicon.ico">
+
+    <title>Bootstrap - Button Demo</title>
+
+    <% include /src/include/styles.ejs %>
+
+</head>
+
+<body>
+
+    <% include /src/include/header.ejs %>
+
+
+        <main>
+            <section class="dg-all-pages-banner">
+                <div class="container-fluid">
+                    <div class="dg-all-pages-banner-title">
+                        <h1 class="dg-pages-main-title">Solutions</h1>
+                    </div>
+                </div>
+                <div class="dg-text-block"></div>
+                <div class="dg-background-right-side"></div>
+            </section>
+            <section class="dg-solutions-details-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="dg-solutions-details" data-aos="fade-up" data-aos-duration="1500">
+                                <h4 class="dg-inner-pages-small-title">Recent technological advances provide financial institutions the oppurtunity to drastically enhance the efficiency and effectiveness of their Compliance and AML programs. <span>We can provide Assistance in:</span></h4>
+                            </div>
+                        </div>
+                        <div class="offset-1 col-11">
+                            <div class="dg-solutions-details-list" data-aos="fade-up" data-aos-duration="1500">
+                                <h5 class="dg-paragraph-text">Streamlining or automating manual or labor-intensive Compliance and AML tasks and process by leveraging Robotic Process Automation (RPA) ‘bots</h5>
+                                <h5 class="dg-paragraph-text">Reducing false positives in surviellance and monitoring programs by integrating artificial intelligence overlays into system-generated alarts</h5>
+                                <h5 class="dg-paragraph-text">Identifying and deploying vendor solutions that leverage machine learning and other advanced approaches to drive stronger results in a more efficient manner</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    <% include /src/include/footer.ejs %>
+
+        <% include /src/include/scripts.ejs %>
+        <script>
+            $('button.hello').click(function (e) {
+                swal("Hello world!");
+            });
+
+            $('button.delete-account').click(function (e) {
+                swal("Good job!", "You clicked the button!", "success");
+            });
+
+            $('button.promises').click(function (e) {
+                swal("Click on either the button or outside the modal.")
+                    .then((value) => {
+                        swal(`The returned value is: ${value}`);
+                    });
+            });
+
+            $('button.sure').click(function (e) {
+                swal({
+                    title: "Are you sure?",
+                    text: "Once deleted, you will not be able to recover this imaginary file!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                    .then((willDelete) => {
+                        if (willDelete) {
+                            swal("Poof! Your imaginary file has been deleted!", {
+                                icon: "success",
+                            });
+                        } else {
+                            swal("Your imaginary file is safe!");
+                        }
+                    });
+            });
+
+        </script>
+    </body>
+
+</html>
